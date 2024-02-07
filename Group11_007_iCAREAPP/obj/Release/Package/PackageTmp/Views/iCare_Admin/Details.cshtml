@@ -1,0 +1,50 @@
+﻿@model Group11_007_iCAREAPP.Models.iCare_Admin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>iCare_Admin</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.dateHired)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dateHired)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dateFinished)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dateFinished)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.iCareUser.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.iCareUser.Name)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

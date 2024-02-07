@@ -1,0 +1,72 @@
+﻿@model Group11_007_iCAREAPP.Models.UserPassword
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>UserPassword</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.userName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.userName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.encryptedPassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.encryptedPassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.passwordExpiryTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.passwordExpiryTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.userAccountExpiryDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.userAccountExpiryDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.iCareUser.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.iCareUser.Name)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

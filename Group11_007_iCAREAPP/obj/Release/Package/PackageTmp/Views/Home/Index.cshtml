@@ -1,0 +1,74 @@
+﻿@model Group11_007_iCAREAPP.Models.login
+
+@{
+    ViewBag.Title = "LOGIN PAGE";
+}
+<style>
+    .img {
+        background-image: url('https://wallpaperaccess.com/full/624111.jpg');
+        width: 88%;
+        height: 100rem;
+        position: absolute;
+    }
+
+    .text-positions {
+        position: absolute;
+        width: 88%;
+        text-align: center;
+        color: #f1f1f1;
+    }
+    .login-buttons {
+        margin-top: 17rem;
+        margin-left: 5rem;
+    }
+    .input-text {
+        margin:5px;
+    }
+    label {
+        font-size: 30px;
+        color: aliceblue;
+    }
+</style>
+
+<!DOCTYPE html>
+
+<div class="img"></div>
+<div class="text-positions">
+    <h1>iCARE</h1>
+</div>
+@using (Html.BeginForm("Verify", "UserPasswords"))
+{
+    <div class="form-group login-buttons">
+        @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10 input-text input-fonts">
+            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group login-buttons">
+        @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10 input-text input-fonts">
+            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style=" margin-left: 52px; margin-top: 29px;">
+            <input type="submit" value="SignIn" class="btn btn-default" />
+        </div>
+    </div>
+
+
+}
+
+
+
+
+</html>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

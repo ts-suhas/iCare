@@ -1,0 +1,93 @@
+﻿@model  Group11_007_iCAREAPP.Models.PatientRecord
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyBoard</title>
+</head>
+<body>
+   
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bloodGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bedID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.treatmentArea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeoCodes.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iCare_Worker.ID)
+            </th>
+            <th></th>
+        </tr>
+
+       
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.dateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.height)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.bloodGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.bedID)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.treatmentArea)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.GeoCodes.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.iCare_Worker.profession)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", Model.ID) |
+                    @Html.ActionLink("Details", "Details", Model.ID) |
+                    @Html.ActionLink("Delete", "Delete", Model.ID)
+                </td>
+            </tr>
+      
+
+    </table>
+</body>
+</html>

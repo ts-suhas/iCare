@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Group11_007_iCAREAPP.Models.PatientRecord>
+
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dateOfBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.height)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.weight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bloodGroup)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bedID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.treatmentArea)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GeoCodes.description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.iCare_Worker.profession)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dateOfBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.height)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.weight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bloodGroup)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bedID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.treatmentArea)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GeoCodes.description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.iCare_Worker.profession)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Assign", "Assign", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </body>
+</html>
+

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Group11_007_iCAREAPP.Models.TreatmentRecord>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.treatmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.patientID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iCare_Worker.profession)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.treatmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.patientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iCare_Worker.iCareUser.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.treatmentID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.treatmentID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.treatmentID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

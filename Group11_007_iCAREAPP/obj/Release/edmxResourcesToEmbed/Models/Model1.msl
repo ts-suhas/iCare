@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Group11_007_iCAREDBModelStoreContainer" CdmEntityContainer="Group11_007_iCAREDBEntities1">
+    <EntitySetMapping Name="DocumentMetadata">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.DocumentMetadata">
+        <MappingFragment StoreEntitySet="DocumentMetadata">
+          <ScalarProperty Name="docID" ColumnName="docID" />
+          <ScalarProperty Name="docName" ColumnName="docName" />
+          <ScalarProperty Name="dateOfCreation" ColumnName="dateOfCreation" />
+          <ScalarProperty Name="patientID" ColumnName="patientID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrugDictionary">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.DrugDictionary">
+        <MappingFragment StoreEntitySet="DrugDictionary">
+          <ScalarProperty Name="DrugId" ColumnName="DrugId" />
+          <ScalarProperty Name="DrugName" ColumnName="DrugName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeoCodes">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.GeoCodes">
+        <MappingFragment StoreEntitySet="GeoCodes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iCare_Admin">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.iCare_Admin">
+        <MappingFragment StoreEntitySet="iCare_Admin">
+          <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iCare_Worker">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.iCare_Worker">
+        <MappingFragment StoreEntitySet="iCare_Worker">
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userroleID" ColumnName="userroleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iCareUser">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.iCareUser">
+        <MappingFragment StoreEntitySet="iCareUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientRecord">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.PatientRecord">
+        <MappingFragment StoreEntitySet="PatientRecord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="bloodGroup" ColumnName="bloodGroup" />
+          <ScalarProperty Name="bedID" ColumnName="bedID" />
+          <ScalarProperty Name="treatmentArea" ColumnName="treatmentArea" />
+          <ScalarProperty Name="geoID" ColumnName="geoID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentRecord">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.TreatmentRecord">
+        <MappingFragment StoreEntitySet="TreatmentRecord">
+          <ScalarProperty Name="treatmentID" ColumnName="treatmentID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="treatmentDate" ColumnName="treatmentDate" />
+          <ScalarProperty Name="patientID" ColumnName="patientID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPassword">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.UserPassword">
+        <MappingFragment StoreEntitySet="UserPassword">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="encryptedPassword" ColumnName="encryptedPassword" />
+          <ScalarProperty Name="passwordExpiryTime" ColumnName="passwordExpiryTime" />
+          <ScalarProperty Name="userAccountExpiryDate" ColumnName="userAccountExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="login">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModificationHistory">
+      <EntityTypeMapping TypeName="Group11_007_iCAREDBModel.ModificationHistory">
+        <MappingFragment StoreEntitySet="ModificationHistory">
+          <ScalarProperty Name="dateofModification" ColumnName="dateofModification" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="docID" ColumnName="docID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

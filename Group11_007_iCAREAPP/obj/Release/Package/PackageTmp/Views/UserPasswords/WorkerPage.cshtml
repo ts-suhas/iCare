@@ -1,0 +1,70 @@
+﻿@model Group11_007_iCAREAPP.Models.login
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WorkerPage</title>
+</head>
+<style>
+    .menu-items {
+        font-family: system-ui;
+        border: 1px solid #e1e1e1;
+        padding: 10px;
+        border-radius: 18px;
+        background: aliceblue;
+    }
+
+    .menu-list {
+    }
+
+    .img-size {
+        width: 50rem;
+        height: 50rem;
+    }
+    .bashboard {
+        font-size: 7rem;
+        margin-top: 21rem;
+    }
+</style>
+<body>
+    <div class="col-sm-12">
+
+        <div class="col-sm-6">
+         <h1 class="bashboard">User Dashboard</h1>
+        </div>
+        <div class="col-sm-6">
+            <div >
+                <h2 class="menu-list">@Html.ActionLink("Entry and Manage Patients", "Index", "PatientRecords")</h2>
+                <p>Manage Patients.</p>
+            </div>
+
+            <div class="menu-list">
+                <h2>@Html.ActionLink("View iCare Board", "Index2", "PatientRecords", Model, null)</h2>
+                <p>View iCare Board.</p>
+            </div>
+
+            <div class="menu-list">
+                <h2>@Html.ActionLink("View My Board", "Myboard", "PatientRecords", Model, null)</h2>
+                <p>View My Board.</p>
+            </div>
+
+            <div class="menu-list">
+                <h2>@Html.ActionLink("Update Patient's treatment Records", "Index", "TreatmentRecords")</h2>
+                <p>Update Patient Records.</p>
+            </div>
+
+            <div class="menu-list">
+                <h2>@Html.ActionLink("Display Pallete", "Index", "DocumentMetadatas")</h2>
+                <p>Display Pallete.</p>
+            </div>
+
+            <div class="menu-list">
+                <h2>@Html.ActionLink("Manage Documents", "Index", "ManageDoc")</h2>
+                <p>Manage Documents.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
